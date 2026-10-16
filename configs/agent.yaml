@@ -1,0 +1,18 @@
+# agentic-coding heavy workload: longer budget, more retries
+agent:
+  max_steps: 24
+  retry_budget: 5
+  repo_index_limit: 512
+  max_files_per_diff: 10
+
+context:
+  max_tokens: 1048576
+  block_size: 256
+  offload: true
+
+moe:
+  n_experts: 256
+  top_k: 8
+  dim: 32
+  hidden: 64
+  n_layers: 6

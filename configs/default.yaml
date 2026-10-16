@@ -1,0 +1,47 @@
+# sparkforge default config (small fast proxy; declared scale in moe.*)
+moe:
+  n_experts: 256
+  top_k: 8
+  dim: 32
+  hidden: 64
+  n_layers: 6
+  load_balance_coef: 0.01
+  total_params_b: 816.0
+  active_params_b: 42.0
+
+memory:
+  bandwidth_gbps: 800.0
+  gpu_pool_gb: 64.0
+  unified_pool_gb: 512.0
+  ssd_pool_gb: 1024.0
+  prefetch_depth: 8
+
+multimodal:
+  patch_size: 8
+  img_size: 32
+  n_audio_frames: 8
+  n_video_frames: 4
+  dim: 32
+
+context:
+  max_tokens: 1048576
+  block_size: 128
+  gpu_blocks: 16
+  offload: true
+
+agent:
+  max_steps: 12
+  retry_budget: 3
+  repo_index_limit: 256
+  max_files_per_diff: 6
+
+model:
+  name: mock
+  dim: 32
+  skill: 0.5
+
+serving:
+  host: "127.0.0.1"
+  port: 8000
+
+seed: 42

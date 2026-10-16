@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: sparkforge
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8000
+
+resources:
+  limits:
+    memory: "4Gi"
+    cpu: "2"

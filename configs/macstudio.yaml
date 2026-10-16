@@ -1,0 +1,18 @@
+# dual M5 Ultra Mac Studio profile (unified memory 512 GB each)
+memory:
+  bandwidth_gbps: 1200.0
+  gpu_pool_gb: 0.0
+  unified_pool_gb: 1024.0
+  ssd_pool_gb: 2048.0
+  prefetch_depth: 8
+
+moe:
+  n_experts: 256
+  top_k: 8
+  total_params_b: 816.0
+  active_params_b: 42.0
+
+context:
+  max_tokens: 1048576
+  block_size: 256
+  offload: true

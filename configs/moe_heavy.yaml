@@ -1,0 +1,13 @@
+# MoE-heavy workload: full 256 experts, deeper stack
+moe:
+  n_experts: 256
+  top_k: 8
+  dim: 32
+  hidden: 64
+  n_layers: 12
+  total_params_b: 816.0
+  active_params_b: 42.0
+
+memory:
+  bandwidth_gbps: 800.0
+  prefetch_depth: 8

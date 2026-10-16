@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sparkforge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sparkforge
+  template:
+    metadata:
+      labels:
+        app: sparkforge
+    spec:
+      containers:
+        - name: sparkforge
+          image: sparkforge:latest
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              memory: "4Gi"
+              cpu: "2"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sparkforge
+spec:
+  selector:
+    app: sparkforge
+  ports:
+    - port: 8000
+      targetPort: 8000
+  type: ClusterIP

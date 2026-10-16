@@ -1,0 +1,22 @@
+# smallest smoke-test config (instant to run)
+moe:
+  n_experts: 16
+  top_k: 4
+  dim: 16
+  hidden: 32
+  n_layers: 2
+
+multimodal:
+  dim: 16
+  img_size: 16
+  n_audio_frames: 4
+  n_video_frames: 2
+
+context:
+  max_tokens: 65536
+  block_size: 64
+  gpu_blocks: 4
+
+model:
+  dim: 16
+  skill: 0.5

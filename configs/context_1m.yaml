@@ -1,0 +1,13 @@
+# 1M-token context profile
+context:
+  max_tokens: 1048576
+  block_size: 256
+  gpu_blocks: 32
+  offload: true
+
+moe:
+  n_experts: 256
+  top_k: 8
+  dim: 32
+  hidden: 64
+  n_layers: 6

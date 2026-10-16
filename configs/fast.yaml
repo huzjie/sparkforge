@@ -1,0 +1,15 @@
+# latency-optimized: shallow, tiny, low prefetch depth
+moe:
+  n_experts: 16
+  top_k: 4
+  dim: 16
+  hidden: 32
+  n_layers: 2
+
+memory:
+  prefetch_depth: 4
+
+context:
+  block_size: 64
+  gpu_blocks: 8
+  offload: false

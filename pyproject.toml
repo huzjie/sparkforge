@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sparkforge"
+version = "0.1.0"
+description = "Unified-memory MoE coding-agent inference engine: 816B MoE / 42B active / 1M ctx / native multimodal, runs on consumer unified-memory machines (Muse Spark Open direction, zero-dependency reference)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "sparkforge contributors" }]
+keywords = ["moe", "mixture-of-experts", "unified-memory", "mlx", "coding-agent", "agentic-coding", "multimodal", "llm-inference", "kv-cache", "zero-dependency"]
+
+[project.scripts]
+sparkforge = "sparkforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sparkforge*"]
